@@ -4,7 +4,7 @@
 # File name：move.sh
 # Description: Move files after Aria2 download is complete
 # Lisence: MIT
-# Version: 1.1
+# Version: 1.2
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=========================================================
@@ -46,7 +46,7 @@ ${LIGHT_PURPLE_FONT_PREFIX}Target path:${FONT_COLOR_SUFFIX} ${TARGET_PATH}
 MOVE_FILE() {
     echo -e "$(date +"%m/%d %H:%M:%S") ${INFO} Start move files ..."
     TASK_INFO
-    mkdir -p ${TARGET_PATH}
+    mkdir -p ${TARGET_DIR}
     mv -f "${SOURCE_PATH}" "${TARGET_PATH}"
     MOVE_EXIT_CODE=$?
     if [ ${MOVE_EXIT_CODE} -eq 0 ]; then
